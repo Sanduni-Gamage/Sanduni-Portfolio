@@ -1,0 +1,13 @@
+# Netlify config for the Next.js portfolio.
+# Overrides the site's old plain-HTML settings (no build command / publish = root)
+# that were left over from the previous static version and caused the 404.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Official Next.js runtime — builds the app and wires up routing on Netlify.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
